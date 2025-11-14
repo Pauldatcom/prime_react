@@ -1,4 +1,4 @@
-export function verifIsPrime(number) {
+export function verifIsPrime(number: number): boolean {
   if (!Number.isInteger(number) || number < 2) {
     return false;
   }
