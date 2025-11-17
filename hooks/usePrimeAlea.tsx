@@ -5,11 +5,12 @@ export function usePrimeAlea() {
   const query = useQuery({
     queryKey: ['primeNumber'],
     queryFn: fetchNumberAlea,
+    staleTime: 0,
   });
 
   return {
     number: query.data?.number ?? null,
-    isLoading: query.isLoading,
+    isLoading: query.isPending,
     isError: query.isError,
     error: query.error,
     refetch: query.refetch,
