@@ -1,9 +1,9 @@
 /**
- * Vérifie si un nombre est premier en utilisant l'algorithme optimisé.
- * Un nombre premier est un nombre naturel supérieur à 1 qui n'a que deux diviseurs : 1 et lui-même.
+ * Checks if a number is prime using an optimized algorithm.
+ * A prime number is a natural number greater than 1 that has only two divisors: 1 and itself.
  * 
- * @param number - Le nombre à vérifier
- * @returns true si le nombre est premier, false sinon
+ * @param number - The number to check
+ * @returns true if the number is prime, false otherwise
  */
 export function verifIsPrime(number: number): boolean {
   if (!Number.isInteger(number) || number < 2) {
