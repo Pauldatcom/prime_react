@@ -15,30 +15,37 @@ A React application built with Vite for prime number verification and generation
 ## Project Structure
 
 ```
-├── App.jsx                 # Main app component
-├── main.jsx                # Application entry point
-├── index.css               # Global styles
+├── App.tsx                 # Main app component
+├── main.tsx                 # Application entry point
+├── index.css                # Global styles
 ├── api/
-│   └── fetchApi.js         # API utilities and number fetching
-├── assets/                 # Static assets
+│   └── fetchApi.ts          # API utilities and number fetching
 ├── components/
-│   ├── Prime.jsx           # Prime number component
-│   └── ui/
-│       └── Button.jsx      # Reusable button component
+│   ├── layout/              # Layout components
+│   │   ├── AppLayout.tsx
+│   │   └── AppSidebar.tsx
+│   ├── ThemeToggle.tsx      # Theme toggle component
+│   └── ui/                  # UI components
+│       ├── Button.jsx
+│       ├── Card.jsx
+│       ├── Input.jsx
+│       ├── Alert.jsx
+│       ├── Badge.jsx
+│       ├── NumberDisplay.jsx
+│       └── StatsCard.jsx
 ├── hooks/
-│   └── usePrimeAlea.jsx    # Custom hook for prime operations
-├── pages/
-│   └── PrimesPage.jsx      # Primes page component
+│   ├── usePrimeAlea.tsx     # Custom hook for prime operations
+│   └── useTheme.tsx         # Theme hook
 ├── routes/
-│   ├── __root.jsx          # Root route layout
-│   ├── index.jsx           # Home route
-│   └── primes.jsx          # Primes route
+│   ├── __root.tsx           # Root route layout
+│   ├── index.tsx            # Home route
+│   └── primes.tsx           # Primes route
 ├── schemas/
-│   └── numberSchema.jsx    # Number validation schemas
+│   └── numberSchema.ts      # Number validation schemas
 ├── service/
-│   └── verifIsPrime.jsx    # Prime number verification service
+│   └── verifIsPrime.ts      # Prime number verification service
 └── stores/
-    └── usePrimeStore.js    # Zustand store for prime state
+    └── usePrimeStore.ts     # Zustand store for prime state
 ```
 
 ## Setup
@@ -51,19 +58,17 @@ A React application built with Vite for prime number verification and generation
 ### Installation
 
 ```bash
-# Install dependencies
+
 pnpm install
 
-# Start development server
 pnpm dev
 
-# Build for production
+
 pnpm build
 
-# Preview production build
+
 pnpm preview
 
-# Run linter
 pnpm lint
 ```
 
